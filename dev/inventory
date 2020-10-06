@@ -1,0 +1,2 @@
+[admin_node]
+my-admin-node ansible_ssh_host=tbd.ca ansible_ssh_user=my_user ansible_ssh_pass=my_pass
