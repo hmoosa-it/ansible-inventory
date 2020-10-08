@@ -1,2 +1,12 @@
+adm_container ansible_host=172.17.0.2 ansible_user=test ansible_ssh_pass=test
+app_container ansible_host=172.17.0.4 ansible_user=test ansible_ssh_pass=test
+
 [admin_node]
-my-admin-node ansible_ssh_host=tbd.ca ansible_ssh_user=my_user ansible_ssh_pass=my_pass
+adm_container
+
+[app_nodes]
+app_container
+
+[all_nodes:children]
+admin_node
+app_nodes
